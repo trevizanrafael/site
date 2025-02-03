@@ -1,0 +1,201 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #E6E6FA; 
+    color: #4B0082; 
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #8A2BE2; 
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.photo-frame {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(75,0,130,0.2); 
+    width: 250px;
+    padding-bottom: 20px;
+    transition: transform 0.3s;
+    border: 2px solid #9370DB; 
+    cursor: pointer;
+}
+
+.photo-frame:hover {
+    transform: rotate(2deg) scale(1.05);
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.photo-frame p {
+    font-family: 'Courier New', monospace;
+    color: #4B0082; 
+    text-align: center;
+    margin: 0;
+}
+
+.love-message {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #8A2BE2; 
+    color: #4B0082; 
+}
+
+.love-message h2 {
+    color: #8A2BE2; 
+}
+
+.heart {
+    position: fixed;
+    top: -10%;
+    font-size: 2rem;
+    pointer-events: none;
+    animation: fall linear infinite;
+    z-index: 9999;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+#heart-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.heart-shaped-button {
+    background: linear-gradient(45deg, #8A2BE2, #9370DB);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    clip-path: path('M30,10 Q50,0 70,10 C90,20 90,40 70,60 Q50,80 30,70 Q10,60 10,40 C10,20 30,10 30,10');
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.heart-shaped-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s;
+}
+
+.heart-shaped-button:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.heart-shaped-button:hover::before {
+    left: 100%;
+}
+
+.bottom-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bottom-button {
+    background: linear-gradient(45deg, #8A2BE2, #9370DB);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.bottom-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: all 0.6s;
+}
+
+.bottom-button:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.2);
+}
+
+.bottom-button:hover::before {
+    left: 100%;
+}
+
+.image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-overlay .overlay-content {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(75,0,130,0.2); 
+    border: 2px solid #9370DB; 
+    padding-bottom: 20px;
+}
+
+.image-overlay .overlay-content img {
+    width: 100%;
+    max-height: 70vh;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.image-overlay .overlay-content p {
+    font-family: 'Courier New', monospace;
+    color: #4B0082; 
+    text-align: center;
+    margin: 0;
+}

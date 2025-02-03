@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #CCA9DD;
+    margin: 0;
+    padding: 0;
+    color: #4a4a4a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #9370DB;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.champion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+.champion-card {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(147, 112, 219, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #FFB6C1;
+    cursor: pointer;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.champion-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(147, 112, 219, 0.3);
+}
+
+.champion-card img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.champion-card:hover img {
+    filter: grayscale(0%);
+}
+
+.champion-card h2 {
+    color: #9370DB;
+    margin: 8px 0;
+    font-size: 1.2em;
+}
+
+.champion-card h3 {
+    color: #FFB6C1;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.champion-card p {
+    color: #4a4a4a;
+    font-size: 0.8em;
+    line-height: 1.5;
+    padding: 0 8px;
+}
+
+.back-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.back-btn {
+    display: inline-block;
+    background-color: #9370DB;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+    background-color: #FFB6C1;
+    transform: translateY(-3px);
+}

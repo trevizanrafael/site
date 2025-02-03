@@ -1,0 +1,20 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="advstyles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo de Adivinhação</h1>
+        <p>Tente adivinhar o número entre 1 e 20</p>
+        <input type="number" id="guessInput" min="1" max="20">
+        <button onclick="checkGuess()">Adivinhar</button>
+        <p id="message"></p>
+        <p id="attempts">Tentativas: 0</p>
+        <p id="guess-path"></p>
+        <a href="index.html" class="back-button">Voltar para Página Inicial</a>
+    </div>
+    <script src="advscript.js"></script>
+</body>
+</html>

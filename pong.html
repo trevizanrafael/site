@@ -1,0 +1,31 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong - Mundo Trevizan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="player-selection" class="modal">
+        <div class="modal-content">
+            <h2>Escolha o número de jogadores</h2>
+            <button onclick="startGame(1)">1 Jogador</button>
+            <button onclick="startGame(2)">2 Jogadores</button>
+        </div>
+    </div>
+    
+    <h1 style="font-family: 'Comic Sans MS', cursive; color: black;">Jogo de Pong</h1>
+    <div class="placar" id="placar">0 - 0</div>
+    <div class="arquibancada" id="torcidaSuperior"></div>
+    <div class="game-container">
+        <canvas id="pongCanvas" width="800" height="400"></canvas>
+        <div class="button-container" id="fimJogo">
+            <button onclick="reiniciarJogo()">Jogar Novamente</button>
+            <button onclick="window.location.href='index.html'">Voltar à Página Inicial</button>
+        </div>
+    </div>
+    <div class="arquibancada arquibancada-inferior" id="torcidaInferior"></div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
